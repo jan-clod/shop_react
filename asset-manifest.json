@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/shop_react/static/css/main.e55609f6.css",
+    "main.js": "/shop_react/static/js/main.4387fbf6.js",
+    "static/js/787.187bdf34.chunk.js": "/shop_react/static/js/787.187bdf34.chunk.js",
+    "static/media/fon1.jpg": "/shop_react/static/media/fon1.720ae607a3dc02444598.jpg",
+    "index.html": "/shop_react/index.html",
+    "main.e55609f6.css.map": "/shop_react/static/css/main.e55609f6.css.map",
+    "main.4387fbf6.js.map": "/shop_react/static/js/main.4387fbf6.js.map",
+    "787.187bdf34.chunk.js.map": "/shop_react/static/js/787.187bdf34.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e55609f6.css",
+    "static/js/main.4387fbf6.js"
+  ]
+}
