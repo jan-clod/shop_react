@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Blinker:wght@600&family=Montserrat:wght@300;600&family=Special+Elite&display=swap");
+
+$fonColor: #fff;
+$textColor: #222;
+$redColor: #dc3d3d;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $fonColor;
+  color: $textColor;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+
+.app {
+  width: 1280px;
+  margin: 50px auto;
+}
+
+.header {
+  position: relative;
+  .header_logo {
+    font-weight: 600;
+    font-size: 25px;
+  }
+  .header_nav {
+    float: right;
+    list-style: none;
+    li {
+      display: inline;
+      margin-left: 25px;
+      cursor: pointer;
+      transition: opacity 300ms ease-in-out;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+  .header_iconTrash {
+    float: right;
+    cursor: pointer;
+    transition: 500ms ease;
+
+    &:hover {
+      color: $redColor;
+      border-radius: 50%;
+    }
+  }
+  .header_iconTrash.active {
+    transform: scale(1.2);
+
+    color: $redColor;
+  }
+  .accardionTrash {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 450px;
+    background-color: #fefefe;
+    z-index: 10;
+    -webkit-box-shadow: 0px 6px 24px -2px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 6px 24px -2px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 6px 24px -2px rgba(34, 60, 80, 0.2);
+    h3 {
+      text-align: center;
+      margin: 10px;
+    }
+    .accardionTrash_item {
+      width: 100%;
+      padding-bottom: 20px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.255);
+      h2 {
+        font-size: 20px;
+        margin: 10px 0;
+      }
+      b {
+        color: #003d26;
+        font-weight: 600;
+      }
+      img {
+        width: 100px;
+        float: left;
+        margin: 10px 20px;
+      }
+      .deleteButton {
+        float: right;
+        margin-right: 20px;
+        cursor: pointer;
+        transition: 250ms ease;
+
+        &:hover {
+          color: #dc3d3d;
+        }
+      }
+    }
+    .accardionTrash_summa {
+      width: 100%;
+      font-size: 18px;
+      font-weight: 600;
+      margin: 10px 20px;
+    }
+  }
+  .header_presentation {
+    margin: 50px auto;
+    background: url("./img/fon1.jpg");
+    width: 100%;
+    height: 500px;
+
+    background-size: cover; /* фиксированый размер? */
+    background-repeat: no-repeat; /* не повторяется изображение */
+    background-position: bottom center;
+    background-blend-mode: multiply; /* теперь можем наложить цвет поверх изображения */
+    background-color: #bcbcbc;
+    position: relative;
+
+    &::after {
+      content: "Лучшие товары для вашего дома";
+      position: absolute; /* так как у родителя relative то абсолютное позиуионирование идиет относительно родителя*/
+      left: 50px;
+      top: 100px;
+      width: 300px;
+      width: 300px;
+      font-size: 40px;
+      font-weight: 600;
+      color: white;
+    }
+    &::before {
+      content: "по низким ценам";
+
+      position: absolute;
+      left: 50px;
+      top: 250px;
+      width: 300px;
+      width: 300px;
+      font-size: 15px;
+      font-weight: 300;
+      color: white;
+    }
+  }
+}
+.filter {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+  margin-top: -17px;
+  margin-bottom: 10px;
+
+  .icon {
+    font-size: 30px;
+    text-align: center;
+  }
+  .filter_window {
+    position: absolute;
+
+    z-index: 10;
+    width: 300px;
+    background-color: #ffffff;
+    top: 50px;
+    -webkit-box-shadow: 0px 6px 24px -2px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 6px 24px -2px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 6px 24px -2px rgba(34, 60, 80, 0.2);
+    p {
+      height: 30px;
+      margin-top: 20px;
+      text-align: center;
+      cursor: pointer;
+      &:hover {
+        font-weight: 600;
+      }
+    }
+  }
+  .filter_div {
+    display: flex;
+    align-items: center;
+    transition: 200ms ease;
+
+    &:hover {
+      /* transform: scale(1.1); */
+      cursor: pointer;
+      color: #109061;
+    }
+  }
+  span {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  width: 100%;
+  h1 {
+    color: #222;
+  }
+  .item {
+    width: 30%;
+    margin-bottom: 30px;
+    background: #f5f5f5;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 20px;
+    h2,
+    p,
+    b {
+      margin: 10px 20px;
+      color: #333;
+    }
+    b {
+      color: #003d26;
+    }
+    .item_addTrash {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      background-color: $redColor;
+      width: 35px;
+      height: 35px;
+      text-align: center;
+      line-height: 35px;
+      color: white;
+      cursor: pointer;
+      border-radius: 50%;
+      font-weight: 600;
+      transition: /* transform */ 300ms ease;
+      &:hover {
+        transform: scale(1.2) /* translateY(-5px) */;
+        background-color: rgb(239, 50, 25);
+      }
+    }
+    img {
+      width: 100%;
+      border-radius: 10px 10px 0 0;
+      &:hover {
+        transition: transform 500ms;
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .item_full_modalWindow{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: #000000a8;
+    z-index: 11;
+    overflow: auto; //чтобы элементы не выходили за пределы страницы
+    .item_modalWindow{
+      background-color: #ffffff;
+      position: relative;
+      margin: 100px auto;
+      padding: 40px;
+
+      width: 600px;
+    }
+  }
+}
+.footer {
+  text-align: center;
+  margin: 100px;
+}
